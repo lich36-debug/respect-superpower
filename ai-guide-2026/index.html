@@ -123,10 +123,7 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
 th,td{border:1px solid #dde4df;padding:10px;vertical-align:top;text-align:left}
 th{background:#f3f6f4}
 .hidden{display:none!important}
-.sharebar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-.sharebtn{border:0;border-radius:12px;padding:11px 16px;font-size:14px;font-weight:700;cursor:pointer;background:#23322e;color:#fff;box-shadow:0 4px 12px rgba(35,50,46,.12)}
-.sharebtn.secondary{background:#fff;color:#23322e;border:1px solid #cfd8d2}
-.sharemsg{font-size:13px;color:#64736d;align-self:center;min-height:1.5em}
+
 @media (max-width:900px){
   .grid{grid-template-columns:repeat(2,1fr)} .quick{grid-template-columns:repeat(2,1fr)}
   .core{grid-template-columns:1fr}
@@ -146,11 +143,6 @@ th{background:#f3f6f4}
     <span class="eyebrow">教育部｜2026 中小學教師數位與 AI 教學指引</span>
     <h1>國小教師速讀版</h1>
     <p class="lead">把 188 頁指引濃縮成「可點、可查、可立即帶進教室」的牌卡。核心不是教老師追新工具，而是協助判斷：何時該用 AI、怎麼用、什麼不能交給 AI。</p>
-    <div class="sharebar">
-      <button id="shareBtn" class="sharebtn" type="button">分享網址</button>
-      <button id="copyBtn" class="sharebtn secondary" type="button">複製連結</button>
-      <span id="shareMsg" class="sharemsg" aria-live="polite"></span>
-    </div>
     <div class="core">
       <div><b>① 以人為中心</b><span>AI 是協作夥伴，不取代教師專業判斷，也不取代學生思考。</span></div>
       <div><b>② 慢 AI</b><span>保留提問、查證、討論、修正與反思，避免「答案很快、學習很淺」。</span></div>
@@ -158,31 +150,10 @@ th{background:#f3f6f4}
     </div>
   </div>
 </header>
-<div class="toolbar">
-  <div class="wrap">
-    <input id="search" class="search" placeholder="搜尋：例如「隱私」「評量」「AI代理人」「國小」">
-    <div class="chips">
-      <button class="chip active" data-filter="all">全部</button>
-      <button class="chip" data-filter="立即可用">立即可用</button>
-      <button class="chip" data-filter="教學設計">教學設計</button>
-      <button class="chip" data-filter="安全倫理">安全倫理</button>
-      <button class="chip" data-filter="專業成長">專業成長</button>
-    </div>
-  </div>
-</div>
+<div class="toolbar"><div class="wrap"><input id="search" class="search" placeholder="搜尋：例如「隱私」「評量」「AI代理人」「國小」"><div class="chips"><button class="chip active" data-filter="all">全部</button><button class="chip" data-filter="立即可用">立即可用</button><button class="chip" data-filter="教學設計">教學設計</button><button class="chip" data-filter="安全倫理">安全倫理</button><button class="chip" data-filter="專業成長">專業成長</button></div></div></div>
 <main class="wrap">
-<section class="section">
-  <h2>老師最常需要的 4 個入口</h2>
-  <p class="section-intro">不必照章節讀。先從你今天要處理的教學情境進入。</p>
-  <div class="quick">
-    <a href="#cards" data-open="traffic"><strong>我今天要讓學生用 AI</strong><small>先看紅黃綠燈與班級規範</small></a>
-    <a href="#cards" data-open="choose"><strong>我要挑一個 AI 工具</strong><small>先問 5 個選用問題</small></a>
-    <a href="#cards" data-open="risks"><strong>我擔心學生依賴 AI</strong><small>看七大風險與 WISE 原則</small></a>
-    <a href="#cards" data-open="plan"><strong>我要用 AI 備課</strong><small>看課前、課中、課後設計</small></a>
-  </div>
-</section>
-<section id="cards">
-<div class="grid">
+<section class="section"><h2>老師最常需要的 4 個入口</h2><p class="section-intro">不必照章節讀。先從你今天要處理的教學情境進入。</p><div class="quick"><a href="#cards" data-open="traffic"><strong>我今天要讓學生用 AI</strong><small>先看紅黃綠燈與班級規範</small></a><a href="#cards" data-open="choose"><strong>我要挑一個 AI 工具</strong><small>先問 5 個選用問題</small></a><a href="#cards" data-open="risks"><strong>我擔心學生依賴 AI</strong><small>看七大風險與 WISE 原則</small></a><a href="#cards" data-open="plan"><strong>我要用 AI 備課</strong><small>看課前、課中、課後設計</small></a></div></section>
+<section id="cards"><div class="grid">
 <article class="card c-olive" data-cat="立即可用 教學設計" data-key="core"><span class="tag">先建立共同語言</span><h3>1｜AI 在學校裡到底扮演什麼角色？</h3><p>一句話：AI 可以幫忙，但「思考、判斷、決策、負責」要回到人。</p><div class="foot"><span>適合：全校共識／研習開場</span><span>頁 5–9、42</span></div></article>
 <article class="card c-mint" data-cat="專業成長 教學設計" data-key="framework"><span class="tag">教師 AI 素養</span><h3>2｜教師需要會什麼？四面向 × 三層級</h3><p>AI 倫理、AI 基礎與技術、AI 賦能教學、AI 促進教師專業發展；從理解到應用，再到創造轉型。</p><div class="foot"><span>適合：教師自評／研習規劃</span><span>頁 24–29</span></div></article>
 <article class="card c-orange" data-cat="教學設計 立即可用" data-key="agent"><span class="tag">AI 代理人</span><h3>3｜AI Agent 可以幫老師做到哪裡？</h3><p>可協助拆任務、規劃、整理、產生建議；但涉及學生權益、評量、輔導與個資，最後必須由教師判斷。</p><div class="foot"><span>適合：備課／行政流程</span><span>頁 39–43</span></div></article>
@@ -193,8 +164,7 @@ th{background:#f3f6f4}
 <article class="card c-mint" data-cat="安全倫理 教學設計" data-key="wise"><span class="tag">WISE 原則</span><h3>8｜學生用 AI 時，教他「思、辨、安、人」</h3><p>思量後果、檢視來源與偏見、守護隱私與身心安全、回到人類能動性與同理關懷。</p><div class="foot"><span>適合：跨領域共同語言</span><span>頁 132–134 起</span></div></article>
 <article class="card c-blue" data-cat="立即可用 安全倫理" data-key="elementary"><span class="tag">國小教師必看</span><h3>9｜國小學生使用生成式 AI 的底線</h3><p>教育型 AI 優先、教師引導使用、不輸入可識別個資、不把答案外包、AI 回饋後仍能用自己的話表達。</p><div class="foot"><span>適合：導師／科任／家長溝通</span><span>頁 31、64–75</span></div></article>
 <article class="card c-olive" data-cat="專業成長" data-key="growth"><span class="tag">不用一次到頂</span><h3>10｜教師 AI 專業成長：理解 → 應用 → 轉型</h3><p>先理解風險與工具，再把 AI 放進教學與社群共備，最後才談客製流程與組織創新；不是每位教師都要做到最高層級。</p><div class="foot"><span>適合：校本增能／PLC</span><span>頁 54–58、169 起</span></div></article>
-</div>
-</section>
+</div></section>
 <section class="note"><h2>給國小現場的一句話版</h2><p><strong>「先學習目標、再選工具；先自己思考、再請 AI 協助；AI 可以給建議，但不能代替孩子學會。」</strong><br>若要在校內推動，我會建議先做三件事：建立班級／校級 AI 使用紅黃綠燈、統一個資與查證底線、共備一個真正能提升學習的 AI 教學案例。</p></section>
 </main>
 <footer><div class="wrap">本頁為《2026 中小學教師數位與 AI 教學指引》之國小教師快速閱讀整理版；內容以原指引為依據，頁碼供回查原文。</div></footer>
@@ -219,19 +189,10 @@ document.querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',e
 document.querySelector('.close').addEventListener('click',()=>{modal.classList.remove('open');document.body.style.overflow=''});
 modal.addEventListener('click',e=>{if(e.target===modal){modal.classList.remove('open');document.body.style.overflow=''}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){modal.classList.remove('open');document.body.style.overflow=''}});
-let filter='all';
-const search=document.getElementById('search');
+let filter='all';const search=document.getElementById('search');
 function apply(){const q=search.value.trim().toLowerCase();document.querySelectorAll('.card').forEach(c=>{const okFilter=filter==='all'||c.dataset.cat.includes(filter);const okText=!q||c.innerText.toLowerCase().includes(q)||detail[c.dataset.key].body.toLowerCase().includes(q);c.classList.toggle('hidden',!(okFilter&&okText));});}
 search.addEventListener('input',apply);
 document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');filter=b.dataset.filter;apply();}));
-const shareBtn=document.getElementById('shareBtn');
-const copyBtn=document.getElementById('copyBtn');
-const shareMsg=document.getElementById('shareMsg');
-const pageTitle='2026 中小學教師數位與 AI 教學指引｜國小教師速讀版';
-function flashMsg(msg){shareMsg.textContent=msg;setTimeout(()=>{shareMsg.textContent='';},2200);}
-async function copyCurrentUrl(){try{await navigator.clipboard.writeText(window.location.href);flashMsg('連結已複製');}catch(err){const ta=document.createElement('textarea');ta.value=window.location.href;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');flashMsg('連結已複製');}catch(e){flashMsg('無法自動複製，請手動複製網址');}ta.remove();}}
-copyBtn.addEventListener('click',copyCurrentUrl);
-shareBtn.addEventListener('click',async()=>{if(navigator.share){try{await navigator.share({title:pageTitle,text:'國小教師快速閱讀版：2026 中小學教師數位與 AI 教學指引',url:window.location.href});}catch(err){if(err&&err.name!=='AbortError')copyCurrentUrl();}}else{copyCurrentUrl();}});
 </script>
 </body>
 </html>
