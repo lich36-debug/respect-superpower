@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>115年中小學教師數位與AI教學指引｜國中教師速讀版</title><style>
+:root{
+  --bg:#f3f6fa;--paper:#fff;--ink:#26323a;--muted:#667786;--line:#dbe3ea;
+  --navy:#5f7896;--teal:#76a9a4;--orange:#cf9776;--gold:#d7bc71;
+  --red:#c98581;--green:#7ea993;--violet:#9388b3;--shadow:0 10px 28px rgba(46,60,78,.09)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75}
+.wrap{max-width:1180px;margin:auto;padding:0 24px}
+.hero{background:linear-gradient(135deg,#edf3fb,#f7f5fb 60%,#eef5f4);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-top:58px;padding-bottom:42px}
+.eyebrow{display:inline-block;padding:6px 12px;border-radius:999px;background:#e4edf8;color:#4d637b;font-size:14px;font-weight:700}
+h1{font-size:clamp(30px,5vw,52px);line-height:1.18;margin:18px 0 14px}
+.lead{font-size:18px;color:var(--muted);max-width:900px;margin:0}
+.core{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.core div{background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:18px;padding:18px}
+.core b{display:block;font-size:17px;margin-bottom:4px}.core span{font-size:14px;color:var(--muted)}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(243,246,250,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.toolbar .wrap{display:flex;gap:12px;align-items:center;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.search{flex:1;min-width:240px;border:1px solid #ccd6d0;background:#fff;border-radius:14px;padding:11px 14px;font-size:15px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid #cbd4ce;background:#fff;border-radius:999px;padding:8px 12px;cursor:pointer;font-size:14px}
+.chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.section{padding:36px 0 10px}.section h2{font-size:27px;margin:0 0 8px}.section-intro{color:var(--muted);margin:0 0 22px}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:10px 0 32px}
+.quick a{text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:0 4px 12px rgba(45,60,52,.04)}
+.quick strong{display:block;margin-bottom:3px}.quick small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding-bottom:44px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);cursor:pointer;transition:.2s;position:relative;min-height:238px}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(40,55,48,.14)}
+.card .tag{font-size:13px;font-weight:800}.card h3{margin:10px 0 8px;font-size:21px;line-height:1.35}.card p{margin:0;color:var(--muted);font-size:15px}
+.card .foot{position:absolute;left:22px;right:22px;bottom:18px;display:flex;justify-content:space-between;gap:10px;color:#7b8983;font-size:12px}
+.c-navy{border-top:6px solid var(--navy)}.c-teal{border-top:6px solid var(--teal)}.c-orange{border-top:6px solid var(--orange)}
+.c-gold{border-top:6px solid var(--gold)}.c-red{border-top:6px solid var(--red)}.c-green{border-top:6px solid var(--green)}.c-violet{border-top:6px solid var(--violet)}
+.note{background:#314250;color:#fff;border-radius:24px;padding:26px;margin:0 0 48px}.note h2{margin-top:0}.note p{color:#dbe5e1;margin-bottom:0}
+footer{padding:26px 0 44px;color:#718078;font-size:13px}
+.modal{position:fixed;inset:0;background:rgba(37,49,63,.56);display:none;z-index:100;padding:22px;overflow:auto}
+.modal.open{display:flex;align-items:flex-start;justify-content:center}
+.panel{width:min(900px,100%);background:#fff;border-radius:24px;margin:5vh auto;padding:26px 28px 30px;box-shadow:0 30px 70px rgba(0,0,0,.25)}
+.close{float:right;border:0;background:#edf2f7;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer}
+.panel h2{margin:4px 46px 8px 0;font-size:29px;line-height:1.35}.source{font-size:13px;color:#79857f;margin-bottom:18px}
+.panel h4{font-size:17px;margin:22px 0 7px}.panel li{margin:7px 0}
+.callout{border-left:5px solid var(--teal);background:#f1f6fb;border-radius:10px;padding:14px 16px;margin:18px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}th,td{border:1px solid #dde4df;padding:10px;vertical-align:top;text-align:left}th{background:#f3f7fb}
+.traffic{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.traffic div{border-radius:14px;padding:14px}.t-red{background:#fff2f0}.t-yellow{background:#fff9e7}.t-green{background:#eef8f2}
+.hidden{display:none!important}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.quick{grid-template-columns:repeat(2,1fr)}.core{grid-template-columns:1fr}}
+@media(max-width:620px){.grid,.quick{grid-template-columns:1fr}.wrap{padding:0 16px}.hero .wrap{padding-top:38px}.panel{padding:22px 18px}.traffic{grid-template-columns:1fr}}
+</style></head><body><header class="hero"><div class="wrap"><span class="eyebrow">教育部｜115年中小學教師數位與 AI 教學指引</span><h1>國中教師速讀版</h1><p class="lead">從國中現場重新整理：不是教學生「會不會用 AI」，而是教他們在作業、評量、探究與真實問題中，知道何時能用、如何查證、如何揭露、如何保留自己的判斷。</p><div class="core"><div><b>① AI 可以進課堂，但不能取代思考</b><span>國中階段更要處理「學習外包、虛假精熟、學術誠信」與思考責任。</span></div><div><b>② 作品之外，更要看歷程</b><span>提示語、查證、修改、反思與人機分工，都是評量學生真實學習的重要證據。</span></div><div><b>③ 從使用工具，走向人機協作素養</b><span>學生需逐步發展資訊判讀、精準提問、任務管理、探究與負責任使用 AI 的能力。</span></div></div></div></header><div class="toolbar"><div class="wrap"><input id="search" class="search" placeholder="搜尋：作業、評量、學術誠信、查證、AI代理人、探究……"><div class="chips"><button class="chip active" data-filter="all">全部</button><button class="chip" data-filter="立即可用">立即可用</button><button class="chip" data-filter="評量作業">評量作業</button><button class="chip" data-filter="教學設計">教學設計</button><button class="chip" data-filter="安全倫理">安全倫理</button><button class="chip" data-filter="專業成長">專業成長</button></div></div></div><main class="wrap"><section class="section"><h2>國中教師最常遇到的 4 個入口</h2><p class="section-intro">不必照章節讀，先從你現在最想解決的課堂問題進入。</p><div class="quick"><a href="#" data-open="traffic"><strong>學生作業可不可以用 AI？</strong><small>先用紅黃綠燈決定範圍</small></a><a href="#" data-open="evidence"><strong>怎麼知道學生真的有學會？</strong><small>改看歷程證據，而非只看成品</small></a><a href="#" data-open="fact"><strong>如何避免 AI 錯誤資訊進入報告？</strong><small>教學生查證與交叉比對</small></a><a href="#" data-open="subject"><strong>各領域怎麼把 AI 放進教學？</strong><small>從英語閱讀、議題討論與探究開始</small></a></div></section><section id="cards"><div class="grid"><article class="card c-navy" data-cat="立即可用 教學設計" data-key="core"><span class="tag">先抓核心</span><h3>1｜國中階段，AI 教育到底要教什麼？</h3><p>重點不只是工具操作，而是讓學生具備判斷、查證、提問、修正、協作與負責任使用 AI 的能力。</p><div class="foot"><span>適合：全校共識／研習</span><span>頁 5–9、42 起</span></div></article><article class="card c-gold" data-cat="立即可用 評量作業 安全倫理" data-key="traffic"><span class="tag">作業與評量</span><h3>2｜AI 可不可以用？用紅黃綠燈決定</h3><p>不是「可以／不可以」二選一，而是依學習目標設定：不用、有限協助、協作完成、全面運用或創新探究。</p><div class="foot"><span>適合：作文／報告／專題</span><span>頁 59–61</span></div></article><article class="card c-red" data-cat="評量作業 安全倫理 立即可用" data-key="evidence"><span class="tag">真實學習證據</span><h3>3｜別只收成品：把 AI 使用歷程納入評量</h3><p>要求學生留下提示語、AI 回應、查證紀錄、修改軌跡與個人反思，避免「做得漂亮但沒有學會」。</p><div class="foot"><span>適合：課堂作業／形成性評量</span><span>頁 45、59–60</span></div></article><article class="card c-teal" data-cat="安全倫理 評量作業" data-key="integrity"><span class="tag">學術誠信</span><h3>4｜學生用了 AI，要怎麼標示才算誠實？</h3><p>清楚揭露 AI 使用範圍、人機分工、查證與修改；不能把 AI 生成內容直接宣稱為個人原創。</p><div class="foot"><span>適合：報告／作文／專題</span><span>頁 59–60</span></div></article><article class="card c-orange" data-cat="教學設計 立即可用" data-key="agent"><span class="tag">AI 代理人</span><h3>5｜AI Agent 可以協助哪些國中學習任務？</h3><p>可協助拆解研究問題、規劃步驟、安排進度與提供反思問題，但不代替學生下結論，也不代替教師做評量。</p><div class="foot"><span>適合：專題／自主學習</span><span>頁 39–43、51–53</span></div></article><article class="card c-violet" data-cat="教學設計 評量作業" data-key="subject"><span class="tag">學科應用</span><h3>6｜各領域怎麼用 AI？先從「有學科任務」開始</h3><p>AI 必須服務學科理解：英語閱讀可做適性提示；議題討論可先整理觀點，再由學生舉例、反駁與修正。</p><div class="foot"><span>適合：領域共備</span><span>頁 85 起、106、156</span></div></article><article class="card c-green" data-cat="安全倫理 教學設計 立即可用" data-key="fact"><span class="tag">媒體識讀</span><h3>7｜AI 回答不是標準答案：教學生查證</h3><p>學生需檢查作者、日期、來源與引用依據，並交叉比對 2–3 個來源，再決定能不能引用或轉傳。</p><div class="foot"><span>適合：社會／國文／自然／專題</span><span>頁 131 起</span></div></article><article class="card c-red" data-cat="安全倫理" data-key="risks"><span class="tag">風險地圖</span><h3>8｜國中生使用 AI 的七大風險</h3><p>錯假訊息、認知卸載、幻覺與偏見、資訊同溫層、隱私安全、教育工具化、情感依附錯位。</p><div class="foot"><span>適合：導師課／資訊倫理</span><span>頁 131 起</span></div></article><article class="card c-navy" data-cat="教學設計 評量作業" data-key="discussion"><span class="tag">探究與討論</span><h3>9｜AI 可以當討論起點，但不能替學生形成觀點</h3><p>先讓 AI 整理正反意見，再讓學生根據校園經驗、證據與同儕辯證修正，最後提出自己的判斷。</p><div class="foot"><span>適合：社會議題／綜合活動</span><span>頁 156</span></div></article><article class="card c-teal" data-cat="教學設計" data-key="fourlearning"><span class="tag">四學架構</span><h3>10｜AI 如何融入自學、共學、互學、導學？</h3><p>AI 不應獨佔學習歷程；教師可讓學生先自學與提問，再透過小組討論與教師導學收斂、修正與深化。</p><div class="foot"><span>適合：混合教學／因材網 e 度</span><span>頁 85 起、106</span></div></article><article class="card c-orange" data-cat="教學設計 安全倫理" data-key="choose"><span class="tag">工具選用</span><h3>11｜通用型 AI 很強，但教師要補上護欄</h3><p>使用前檢查年齡、學習目標、隱私、課程相容性與人類監督；教育型 AI 應優先考量。</p><div class="foot"><span>適合：工具採用／校內規範</span><span>頁 64–68</span></div></article><article class="card c-violet" data-cat="專業成長" data-key="growth"><span class="tag">教師專業</span><h3>12｜教師 AI 專業成長，不是比誰會更多工具</h3><p>從理解倫理與技術，到能把 AI 放進學科教學與社群共備，再逐步走向人機協作與校本創新。</p><div class="foot"><span>適合：PLC／校本增能</span><span>頁 54–58、169 起</span></div></article></div></section><section class="note"><h2>給國中現場的一句話版</h2><p><strong>「允許 AI，不等於放棄要求；真正要提高的是學生對自己的思考、證據與作品負責的程度。」</strong><br>國中階段最值得建立的共同規範，是：哪些任務不能用 AI、哪些可以用但要標示、哪些本來就在評量人機協作能力。</p></section></main><footer><div class="wrap">本頁為《115年中小學教師數位與 AI 教學指引》之國中教師快速閱讀整理版；內容依原指引重新編排，頁碼供回查原文。</div></footer><div id="modal" class="modal"><div class="panel"><button class="close">×</button><div id="modalContent"></div></div></div><script>
+const detail={
+core:{title:"國中 AI 教育：從工具使用走向判斷與責任",source:"原指引：序言、第一至三章",body:`<div class="callout"><b>核心：</b>AI 是工具，人是主體。國中階段的重點，是讓學生在使用 AI 的同時，仍保有提問、查證、討論、修正與負責的能力。</div><ul><li>教師：從工具使用者轉向學習設計者、倫理引導者與專業共創者。</li><li>學生：從取得答案轉向能判斷 AI、管理 AI、與 AI 協作。</li><li>課堂：保留必要的認知掙扎，避免認知卸載與虛假精熟。</li></ul>`},
+traffic:{title:"AI 使用紅黃綠燈：作業與評量先說清楚",source:"原指引：表 3-1，頁 59–61",body:`<div class="traffic"><div class="t-red"><b>🔴 紅燈</b><br>測驗、口試、現場寫作、基本技能等，要確認學生個人真實能力時，不使用 AI。</div><div class="t-yellow"><b>🟡 黃燈</b><br>可用於發想、資料搜尋、架構、草擬、修改與回饋，但要查證、標示並保留修改歷程。</div><div class="t-green"><b>🟢 綠燈</b><br>當學習目標本身就是提示設計、人機協作、AI 任務管理、創新探究時，可全面運用 AI。</div></div><h4>教師出作業前先問</h4><ul><li>我要評量學生個人能力，還是人機協作能力？</li><li>AI 可以在哪些階段使用？</li><li>哪些部分一定要學生自己完成？</li><li>需要繳交哪些 AI 使用證據？</li></ul>`},
+evidence:{title:"評量不能只看成品：要看歷程證據",source:"原指引：頁 45、59–60",body:`<p>當 AI 能快速產生完整成品，教師若只看最後作品，很容易出現「虛假精熟」。指引建議把過程導向評量納入。</p><h4>可要求學生繳交</h4><ul><li>使用了什麼 AI 工具。</li><li>重要提示語或對話紀錄。</li><li>AI 給了哪些建議。</li><li>哪些資料有查證。</li><li>拒絕或修改了 AI 哪些內容。</li><li>最後哪些判斷是自己完成。</li></ul>`},
+integrity:{title:"學術誠信：不是禁止 AI，而是揭露人機分工",source:"原指引：頁 59–60",body:`<ul><li>不得直接複製 AI 生成內容並宣稱個人原創。</li><li>若使用 AI 發想、架構或修改，應依任務要求標示工具與使用方式。</li><li>引用 AI 觀點前須查證來源。</li><li>作品應能由學生自己說明、辯證與回答追問。</li></ul><div class="callout">可把「我用了什麼、我查了什麼、我改了什麼、最後我怎麼判斷」設計成作業固定欄位。</div>`},
+agent:{title:"AI 代理人：適合協助任務流程，不代替學習判斷",source:"原指引：頁 39–43、51–53",body:`<p>AI 代理人比一般生成式 AI 更能拆解任務、規劃步驟、運用工具與調整策略。</p><h4>國中可用</h4><ul><li>專題：拆研究問題、列資料蒐集步驟、提醒進度。</li><li>自主學習：協助設定週進度與自我檢核問題。</li><li>寫作：提供回饋與修改方向，而非代寫全文。</li></ul><h4>不能外包</h4><p>學生最後的結論、價值判斷、查證責任，以及教師的評量與輔導決定。</p>`},
+subject:{title:"學科應用：AI 要服務學科理解",source:"原指引：第五章；國中英語示例頁 106；國中議題討論頁 156",body:`<h4>英語閱讀示例</h4><p>指引以國中英語閱讀課為例，結合四學架構與因材網 e 度，依學生程度提供初階、進階提示語，協助掌握時間序列、文本結構與關鍵字彙，同時讓學生反思 AI 如何輔助思考。</p><h4>議題討論示例</h4><p>學生先請 AI 整理正反觀點，再透過小組討論判斷哪些符合校園經驗、哪些太簡化、還需要什麼證據，最後提出自己的結論。</p><div class="callout">原則：先有學科問題，再決定 AI 角色；不要反過來因為有 AI 工具而硬塞進課程。</div>`},
+fact:{title:"查證：AI 回答只是待檢核的參考",source:"原指引：第六章，錯假訊息與 STEP 查證相關內容",body:`<ul><li>檢查作者、日期、資料來源、引用依據與可信度。</li><li>至少交叉比對 2–3 個來源。</li><li>辨識 AI 幻覺、過時資訊、錯誤引用與多模態假訊息。</li><li>學生應說明：AI 協助了什麼、自己查證了什麼、修正了什麼。</li></ul><p>可把查證流程直接納入專題報告、媒體識讀或 AI 作業規準。</p>`},
+risks:{title:"七大 AI 風險",source:"原指引：第六章，頁 131 起",body:`<ol><li>錯假訊息吸收</li><li>認知卸載</li><li>AI 幻覺與偏見</li><li>演算法造成資訊同溫層</li><li>隱私與資訊安全</li><li>教育工具化</li><li>情感依附錯位</li></ol><p>國中導師與各科教師都可以把這七項轉成班級案例討論，而不是只當資訊課內容。</p>`},
+discussion:{title:"議題討論：讓 AI 當起點，不當結論",source:"原指引：頁 156",body:`<p>原指引國中示例以「學生使用手機是否應有時間限制？」為題：</p><ol><li>先請 AI 整理正反觀點。</li><li>小組判斷哪些符合校園經驗。</li><li>找出過度簡化或缺乏證據的說法。</li><li>補充證據、反駁與修正。</li><li>提出小組自己的結論與理由。</li></ol><div class="callout">學生最後要能清楚說明：AI 提供了什麼、我們改了什麼、最後判斷是什麼。</div>`},
+fourlearning:{title:"四學架構：AI 不應取代同儕互動與教師導學",source:"原指引：第五章與國中英語示例",body:`<table><tr><th>階段</th><th>AI 可扮演角色</th></tr><tr><td>學生自學</td><td>概念澄清、提示、適性練習、閱讀鷹架。</td></tr><tr><td>組內共學</td><td>把 AI 回答拿來比較、質疑與修正。</td></tr><tr><td>組間互學</td><td>不同組比較證據、論證與解法。</td></tr><tr><td>教師導學</td><td>收斂重點、澄清迷思、補上 AI 無法理解的脈絡與價值判斷。</td></tr></table>`},
+choose:{title:"工具選用：通用型 AI 要由教師補上護欄",source:"原指引：第四章，頁 64–68",body:`<ol><li>符合學生年齡與平臺使用規範嗎？</li><li>真的對準這節課的學習目標嗎？</li><li>有資料隱私與安全保障嗎？</li><li>能自然融入課程流程嗎？</li><li>有沒有保留教師專業判斷與學生思考歷程？</li></ol><p>教育型 AI 因有課程、年齡、資料與教學鷹架設計，原指引建議優先考量。</p>`},
+growth:{title:"教師專業成長：理解 → 應用 → 轉型",source:"原指引：第三、七章",body:`<h4>取得理解</h4><p>先理解倫理、技術、幻覺、偏見、認知卸載與工具差異。</p><h4>深化應用</h4><p>把 AI 放進學科教學、共備、學習數據分析、模擬對話與專業反思。</p><h4>創造轉型</h4><p>發展校本 AI 規範、人機協作流程、跨領域課程與可持續的專業社群。</p><div class="callout">重點不是每位教師都做到最高階，而是依自身教學需求螺旋式成長。</div>`}
+};
+
+const modal=document.getElementById('modal'),content=document.getElementById('modalContent');
+function openCard(k){const d=detail[k];if(!d)return;content.innerHTML=`<h2>${d.title}</h2><div class="source">${d.source}</div>${d.body}`;modal.classList.add('open');document.body.style.overflow='hidden'}
+document.querySelectorAll('.card').forEach(c=>c.onclick=()=>openCard(c.dataset.key));
+document.querySelectorAll('[data-open]').forEach(a=>a.onclick=e=>{e.preventDefault();openCard(a.dataset.open)});
+document.querySelector('.close').onclick=()=>{modal.classList.remove('open');document.body.style.overflow=''};
+modal.onclick=e=>{if(e.target===modal){modal.classList.remove('open');document.body.style.overflow=''}};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){modal.classList.remove('open');document.body.style.overflow=''}});
+
+let filter='all';const search=document.getElementById('search');
+function apply(){const q=search.value.trim().toLowerCase();document.querySelectorAll('.card').forEach(c=>{const okf=filter==='all'||c.dataset.cat.includes(filter);const okt=!q||c.innerText.toLowerCase().includes(q)||detail[c.dataset.key].body.toLowerCase().includes(q);c.classList.toggle('hidden',!(okf&&okt))})}
+search.oninput=apply;
+document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');filter=b.dataset.filter;apply()});
+</script></body></html>
